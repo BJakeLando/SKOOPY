@@ -9,4 +9,5 @@ from .views import (
 urlpatterns = [
     path('', home, name='home'),
     path('properties', all_properties, name='properties'),
+
 ]

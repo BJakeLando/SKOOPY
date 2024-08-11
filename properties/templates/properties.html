@@ -3,10 +3,22 @@
 
 {% block content %}
 <h1>Properties page</h1>
-<ul>
+
 {% for property in property_list %}
-<li>{{ property }}</li>
-{% endfor %}
+<strong>{{property}}</strong>
+<ul>
+    <li>{{ property.date }}</li>
+    <li>{{ property.description }}</li>
+    <li>{{ propery.landlord }}</li>
+
+        <li>Tenant Name:
+            {% for tenant in property.tenants.all %}
+            {{tenant}}
+            {% endfor%}
+        </li>
+
 </ul>
+{% endfor %}
+
 
 {% endblock content %}
